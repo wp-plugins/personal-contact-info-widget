@@ -3,7 +3,7 @@
 	/**
 	 * Plugin Name: Personal Contact Info Widget
 	 * Description: Custom Widget for displaying your photo and personal contact information.
-	 * Version: 1.0
+	 * Version: 1.1
 	 * Author: Juan Sanchez Jr.
 	 * License: GPLv2 or later
 	 */

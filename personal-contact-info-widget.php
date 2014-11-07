@@ -94,9 +94,9 @@
 				echo $before_title , $title , $after_title;
 			}
 			
-			if( !empty( $profile_image_url ) && !empty( $profile_image ) && !empty( $profile_image_below ) ){
+			if( !empty( $profile_image_url ) && !empty( $profile_image ) && !empty( $profile_image_below ) && !empty( $profile_image_width ) ){
 				if ( $profile_image_below  === 'unchecked' ) {
-					echo '<img src="' , $profile_image_url , '" class="jsjr-pci-photo ', $profile_image , '" alt="Profile Photo" />';
+					echo '<img src="' , $profile_image_url , '" class="jsjr-pci-photo ', $profile_image , '" style="width:' , $profile_image_width , '" alt="Profile Photo" />';
 				} 
 			} 
 			
@@ -161,6 +161,20 @@
 				'jsjr-pci-photo-thumbnail'	=> 'Thumbnail'
 			);
 			
+			$select_options_width = array (
+				'auto'		=> 'Use Photo\'s Width',
+				'100%'		=> '100%',
+				'90%'		=> '90%',
+				'80%'		=> '80%',
+				'70%'		=> '70%',
+				'60%'		=> '60%',
+				'50%'		=> '50%',
+				'40%'		=> '40%',
+				'30%'		=> '30%',
+				'20%'		=> '20%',
+				'10%'		=> '10%'
+			);
+			
 			?>
 			
 			<p>
@@ -183,9 +197,20 @@
 						<a href="#" class="jsjr-pci-question" title="<?php _e( 'NOTICE: These styles do not work on old internet browsers.', $this->domain ) ?>">?</a>
 						<select name="<?php echo $this->get_field_name('profile_image'); ?>" id="<?php echo $this->get_field_id('profile_image'); ?>" class="widefat">
 							<?php
-							$profile_image = isset( $profile_image ) ? $profile_image : '';
+							$profile_image = isset( $profile_image ) ? $profile_image : 'jsjr-pci-photo-square';
 							foreach ( $select_options as $key => $value ) {
 								echo '<option value="' , $key , '" ', selected( $profile_image, $key ) , '>', __( $value, $this->domain ) , '</option>';
+							}
+							?>
+						</select>
+					</p>
+					<p>
+						<label for="<?php echo $this->get_field_id('profile_image_width'); ?>"><?php _e('Image Width:'); ?></label>
+						<select name="<?php echo $this->get_field_name('profile_image_width'); ?>" id="<?php echo $this->get_field_id('profile_image_width'); ?>" class="widefat">
+							<?php
+							$profile_image = isset( $profile_image_width ) ? $profile_image_width : 'auto';
+							foreach ( $select_options_width as $key => $value ) {
+								echo '<option value="' , $key , '" ', selected( $profile_image_width, $key ) , '>', __( $value, $this->domain ) , '</option>';
 							}
 							?>
 						</select>

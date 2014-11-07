@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: social icons,profile photo,contact information,profile,personal contact,widget,contact
 Requires at least: 3.5
 Tested up to: 4.0
-Stable tag: 1.0
+Stable tag: 1.1
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -47,6 +47,11 @@ This plugin utilizes special fonts (Font Awesome) in order to display the variou
 To avoid Font Awesome from loading more than once on your website, I have made this an opt-out feature. If you are not sure if your current theme or plugins are already loading Font Awesome, just check the "Do not load Font Awesome" box in the Advanced Options section  (in the configuration options for your Widget in the WordPress Admin Dashboard under Appearance > Widgets). If your Social Media icons disappear on your website, simply go back and uncheck this option and save the changes again.
 
 == Changelog ==
+
+= 1.1 =
+* Fixed Tooltip on help menu
+* NEW Feature - Allow adjustable photo width
+
 = 1.0 =
 * First version, no known issues
 

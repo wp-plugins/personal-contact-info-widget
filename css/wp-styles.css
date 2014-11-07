@@ -1,5 +1,5 @@
 .jsjr-pci-photo {
-	width: 100%;
+
 }
 
 .jsjr-pci-photo-thumbnail {
@@ -98,9 +98,7 @@ lg (>1200px)
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
-	.jsjr-pci-photo {
-		width: 250px;
-	}
+
 }
 
 /* Extra Small Devices, Phones */ 

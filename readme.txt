@@ -3,8 +3,8 @@ Contributors: bringmesupport
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6767SEGP9P5V8
 Tags: social icons,profile photo,contact information,profile,personal contact,widget,contact
 Requires at least: 3.5
-Tested up to: 4.0
-Stable tag: 1.1
+Tested up to: 4.1
+Stable tag: 1.2
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -14,7 +14,7 @@ Add a custom Widget to display your profile photo, social media links and contac
 
 This plugin adds a custom Widget which displays your profile photo, social media links and contact information. Here is a current list of features:
 
-* 20 Social Media icons to choose from (using Font Awesome 4.2.0)
+* 21 Social Media icons to choose from (using Font Awesome 4.3.0)
 * Upload a profile photo, or choose one from your existing Media Library
 * 4 different photo styles to choose from (newer internet browsers)
 * Enter contact information (full name, slogan, email, phone number, alternate website address)
@@ -48,12 +48,18 @@ To avoid Font Awesome from loading more than once on your website, I have made t
 
 == Changelog ==
 
+= 1.2 =
+* NEW Feature - Widget alignment ( left, center, right )
+* NEW Feature - Adjust spacing between text
+* NEW Social Icon - (Stack Exchange)
+* Fixed - Website field not appearing on widget
+
 = 1.1 =
 * Fixed Tooltip on help menu
 * NEW Feature - Allow adjustable photo width
 
 = 1.0 =
-* First version, no known issues
+* First version
 
 == Upgrade Notice ==
 = 1.0 =

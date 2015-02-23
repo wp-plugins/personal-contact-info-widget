@@ -1,32 +1,33 @@
 jQuery(document).ready(function($){
 
 	var media_frame;
+        var inputElement;
 
-	jQuery('body').on('click', '.upload-button', function( event ){
+	jQuery( 'body' ).on('click', '.upload-button', function( event ){
 
 		event.preventDefault();
-
+                
+                inputElement = jQuery( this ).prev();
+                
+                console.log( inputElement );
+                
 		if ( media_frame ) {
 			media_frame.open();
 			return;
 		}
 
 		media_frame = wp.media.frames.media_frame = wp.media({
-			title: 'Upload an Image, Or Select One From the Library',
-			frame: 'select',
-			button: {
-				text: 'Select Image',
-			},
-            library: {
-                type: 'image'
-            },
-			multiple: false
+                    title: 'Upload an Image, Or Select One From the Library',
+                    frame: 'select',
+                    multiple: false,
+                    button: { text: 'Select Image' },
+                    library: { type: 'image' }
 		});
 		
 		media_frame.on( 'select', function() {
 			attachment = media_frame.state().get('selection').first().toJSON();
-			console.log( attachment );
-			$('.upload-input').val( attachment.url );
+			console.log( attachment.url );
+			inputElement.val( attachment.url );
 		});
 
 		media_frame.open();

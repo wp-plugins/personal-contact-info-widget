@@ -56,3 +56,7 @@
 body .ui-tooltip {
 	border-width: 2px;
 }
+
+.jsjr-pci-accordion hr + p > label {
+	font-weight:bold;
+}
